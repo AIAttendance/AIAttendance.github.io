@@ -258,10 +258,11 @@ function detection_1() {
             image.src=img1.src;
             image.appendChild(img1);
             console.log("image.src"+image.src)
-            image.src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;
+<!--            image.src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
 <!--            document.getElementById("originalImg1").src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
             console.log("https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v)
 <!--                url = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
+            image.src = "output/"+data.table.rows[i].c[6].v;
 <!--            image.innerHTML="<img id='originalImg' src='" + url + "' >";-->
 
 
@@ -314,9 +315,9 @@ var roll_no = prompt('Enter correct roll number');
     Javacsript:SubForm();
 }
 
-function choose_label(){
-if( `images/${label}.jpg`)
-}
+<!--function choose_label(){-->
+<!--if( `images/${label}.jpg`)-->
+<!--}-->
 </script>
 
 <script type="text/javascript">
@@ -343,8 +344,8 @@ function detection()
 <!--        document.img.append(container)-->
 <!--        document.img.append('Loaded')-->
 <!--        img.crossOrigin = "Anonymous";-->
-//         alert(img.src)
-          alert("Please wait")
+        alert(img.src)
+        alert("Please wait");
 <!--        "<img src='"+img.src+"'>"-->
 <!--        const canvas = $('#reflay').get(0)-->
         const canvas = faceapi.createCanvasFromMedia(img)
@@ -355,11 +356,11 @@ function detection()
         faceapi.matchDimensions(canvas, displaySize)
 <!--        faceapi.matchDimensions(canvas, img)-->
         let faceDescriptions = await faceapi.detectAllFaces(img).withFaceLandmarks().withFaceDescriptors().withFaceExpressions()
-//         alert(faceDescriptions)
-         alert("Please wait")
+<!--        alert(faceDescriptions)-->
+        alert("Please wait");
 
 
-//         alert("img and canvas")
+<!--        alert("img and canvas")-->
         faceDescriptions = faceapi.resizeResults(faceDescriptions, img)
 <!--        faceapi.draw.drawDetections(canvas, faceDescriptions)-->
 
@@ -508,7 +509,7 @@ function detection()
  <div class='row-6 text-center justify-content-center'>
 <!--<div class="row justify-content-center">-->
 <div class="col-6" style="float:left">
-       <img src="images/20221121_104219.jpg"  id="originalImg" style="position:absolute;left:0px" width="600px" height="600px" />
+       <img src="images/Selection_329.png"  id="originalImg" style="position:absolute;left:0px" width="600px" height="600px" />
 
 <!--       <canvas id="reflay" width="700" height="700" class="overlay"></canvas>-->
 <!--    <h2 style="color:Yellow">Detected students</h2>-->
