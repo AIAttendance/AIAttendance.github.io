@@ -233,10 +233,10 @@ function detection_1() {
     .then(rep => {
 <!--       console.log("cid " + cid + " " + time);-->
        let data = JSON.parse(rep.substr(47).slice(0,-2));
-//        console.log("date1 " + data.table.rows[1].c[0].v  +" " +data.table.rows[1].c[1].v +" "+data.table.rows[1].c[2].v + " "+data.table.rows[1].c[3].v)
+<!--       console.log("date1 " + data.table.rows[1].c[0].v  +" " +data.table.rows[1].c[1].v +" "+data.table.rows[1].c[2].v + " "+data.table.rows[1].c[3].v)-->
 <!--       let player_Name_title = document.getElementById('originalImg').src;-->
 <!--       let player_Name_title1 = document.getElementById('originalImg1').src;-->
-       for (let i = 1; i < 4; i++){
+       for (let i = 1; i < 1; i++){
 <!--       console.log(" excel: "+data.table.rows[i].c[3].v , code = data.table.rows[i].c[4].v);-->
 <!--(stime = data.table.rows[i].c[1].v) && (etime = data.table.rows[i].c[2].v) &&-->
         if((cid == data.table.rows[i].c[3].v) &&  (code = data.table.rows[i].c[4].v)){
@@ -252,19 +252,20 @@ function detection_1() {
 
 <!--            player_Name_title = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
 <!--            player_Name_title1 = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
-            img1.src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v
-            console.log("img1.src"+img1.src)
+<!--            img1.src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v-->
+<!--            console.log("img1.src"+img1.src)-->
 <!--            image.before(img1);-->
-            image.src=img1.src;
-            image.appendChild(img1);
-            console.log("image.src"+image.src)
+<!--            image.src=img1.src;-->
+<!--            image.appendChild(img1);-->
+<!--            console.log("image.src"+image.src)-->
 <!--            image.src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
 <!--            document.getElementById("originalImg1").src = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
-//             console.log("https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v)
+<!--            console.log("https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v)-->
 <!--                url = "https://drive.google.com/uc?export=view&id="+data.table.rows[i].c[6].v;-->
-            image.src = "output/"+data.table.rows[i].c[6].v;
-           image.innerHTML="<img id='originalImg' src='" + url + "' >";
-
+<!--            image.src = "output/"+data.table.rows[i].c[6].v;-->
+<!--            image.innerHTML="<img id='originalImg' src='" + url + "' >";-->
+            alert("output/"+data.table.rows[i].c[6].v)
+            document.getElementById("originalImg").src = "output/"+data.table.rows[i].c[6].v;
 
     }}
     })
