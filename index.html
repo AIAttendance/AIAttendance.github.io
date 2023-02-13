@@ -236,7 +236,9 @@ function detection_1() {
 <!--       console.log("date1 " + data.table.rows[1].c[0].v  +" " +data.table.rows[1].c[1].v +" "+data.table.rows[1].c[2].v + " "+data.table.rows[1].c[3].v)-->
 <!--       let player_Name_title = document.getElementById('originalImg').src;-->
 <!--       let player_Name_title1 = document.getElementById('originalImg1').src;-->
-       for (let i = 1; i < 2; i++){
+         alert(data.table.rows.length-1);
+         len = data.table.rows.length-1
+       for (let i = 1; i < len; i++){
      console.log(" excel: "+data.table.rows[i].c[3].v , code = data.table.rows[i].c[4].v);
 <!--(stime = data.table.rows[i].c[1].v) && (etime = data.table.rows[i].c[2].v) &&-->
         if((cid == data.table.rows[i].c[3].v) &&  (code = data.table.rows[i].c[4].v)){
