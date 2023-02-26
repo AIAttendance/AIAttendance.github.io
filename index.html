@@ -431,11 +431,15 @@ function detection()
             name.setAttribute("id", 2);
             name.innerHTML = bestMatch.toString();
             edit_y = row.insertCell(2);
+            edit_n = row.insertCell(3);
+            edit_y.setAttribute("id", 3);
+             edit_n.setAttribute("id", 3);
 <!--            edit_n = row.insertCell(3);-->
 <!--            edit_y.setAttribute("id",yes);-->
 <!--            edit_n.setAttribute("id",no);-->
 <!--            save = row.insertCell(3);-->
-             edit_y.innerHTML = '<input type="button" value = "Yes" onClick="Javacsript:SubForm(this)">&nbsp;&nbsp;<input type="button" value = "No" onClick="correct_rollno()">'
+             edit_y.innerHTML = '<input type="button" value = "Yes" onClick="Javacsript:SubForm(this)">
+             edit_n.innerHTML = '<input type="button" value = "No" onClick="correct_rollno()">'
 
 //--------------------------------------------------------
 <!--    edit.innerHTML =-->
