@@ -420,8 +420,8 @@ function detection()
             downloadlink.href = imagedata;
 <!--            img.append(canvas)-->
             let row = table.insertRow();
-            let save = document.createElement("button");
-            let edit = document.createElement("button");
+            let edit_y = document.createElement("button");
+            let edit_n = document.createElement("button");
             let date = row.insertCell(0);
             let name = row.insertCell(1);
             date.innerHTML = i.toString();
@@ -433,13 +433,16 @@ function detection()
             edit_y = row.insertCell(2);
             edit_n = row.insertCell(3);
             edit_y.setAttribute("id", 3);
-             edit_n.setAttribute("id", 4);
+            edit_n.setAttribute("id", 4);
+            edit_y.setAttribute("onClick", Javacsript:SubForm(this));
+            edit_n.setAttribute("onClick", correct_rollno());
+             
 <!--            edit_n = row.insertCell(3);-->
 <!--            edit_y.setAttribute("id",yes);-->
 <!--            edit_n.setAttribute("id",no);-->
 <!--            save = row.insertCell(3);-->
-             edit_y.innerHTML = '<input type="button" value = "Yes" onClick="Javacsript:SubForm(this)">';
-             edit_n.innerHTML = '<input type="button" value = "No" onClick="correct_rollno()">';
+//              edit_y.innerHTML = '<input type="button" value = "Yes" onClick="Javacsript:SubForm(this)">';
+//              edit_n.innerHTML = '<input type="button" value = "No" onClick="correct_rollno()">';
 
 //--------------------------------------------------------
 <!--    edit.innerHTML =-->
@@ -575,6 +578,7 @@ function detection()
 <!--      <label>RollNo</label>-->
  <input type="hidden" name="rollno" id="rollno" />      <br/>
    </form>
+
 <script src="js/jquery-2.1.1.min.js"></script>
         <script src="js/face-api.js"></script>
 
